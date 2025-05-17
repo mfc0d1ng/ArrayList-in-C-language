@@ -55,8 +55,6 @@ output:
 #include &lt;stdlib.h&gt;
 #include "ArrayList.h"
 
-#define $(__x)  ArrayList_make(__x)
-
 int main()
 {
     ArrayList* data = ArrayList_object();
