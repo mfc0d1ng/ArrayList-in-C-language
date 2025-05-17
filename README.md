@@ -46,3 +46,35 @@ int main()
 
 output:
 <pre> ArrayList data: ['A', "ABC", 10, 0.12] </pre>
+
+* Example A:
+
+<pre>
+<code class="language-c">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include "ArrayList.h"
+
+#define $(__x)  ArrayList_make(__x)
+
+int main()
+{
+    ArrayList* data = ArrayList_object();
+    
+    ArrayList_push(data, "Hello world");
+    ArrayList_push(data, (char)'Z');
+    ArrayList_push(data, 123);
+    ArrayList_push(data, 0.123);
+    
+    printf("ArrayList data: ");
+    ArrayList_display(data);
+
+    ArrayList_delete(data);
+    
+    return EXIT_SUCCESS;
+}
+</code>
+</pre>
+
+output:
+<pre> ArrayList data: ["Hello world", 'Z', 123, 0.123] </pre>
