@@ -22,6 +22,8 @@ You can link the library to your C project as follows: gcc example.c -l ArrayLis
 #include &lt;stdlib.h&gt;
 #include "ArrayList.h"
 
+#define $(__x)  ArrayList_make(__x)
+
 int main()
 {
     ArrayList* data = ArrayList_object();
