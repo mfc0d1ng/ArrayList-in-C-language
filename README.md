@@ -39,6 +39,7 @@ int main()
     ArrayList_display(data);
 
     ArrayList_delete(data);
+    
     return EXIT_SUCCESS;
 }
 </code>
