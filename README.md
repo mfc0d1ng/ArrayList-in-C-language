@@ -44,4 +44,5 @@ int main()
 </code>
 </pre>
 
-<pre>output: <br> ArrayList data: ['A', "ABC", 10, 0.12] </pre>
+output:
+<pre> ArrayList data: ['A', "ABC", 10, 0.12] </pre>
