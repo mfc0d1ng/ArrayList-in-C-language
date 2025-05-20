@@ -24,9 +24,9 @@ You can link the library to your C project as follows: gcc example.c -l ArrayLis
 
 int main()
 {
-    ArrayList_IL a[] = {$L(char('A')), $L("ABC"), $L(100)};
-
     ArrayList *values = ArrayList_object();
+
+    ArrayList_IL a[] = {$L(char('A')), $L("ABC"), $L(100)};
 
     for (size_t i = 0; i < 3; i++)
     {
