@@ -64,7 +64,7 @@ int main()
     ArrayList_push(data, 123);
     ArrayList_push(data, 0.123);
     
-    ArrayList_display(data);
+    ArrayList_println(data);
 
     ArrayList_delete(data);
     
