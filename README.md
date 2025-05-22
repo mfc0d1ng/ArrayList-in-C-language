@@ -3,7 +3,7 @@ A shared library which provides a set of functions for handling ArrayList in C l
 
 
 <h2>How to download?</h2>
-You can download it <a href="https://github.com/user-attachments/files/20354459/libArrayList.zip">here</a>
+You can download it <a href="https://github.com/user-attachments/files/20382895/libArrayList.zip">here</a>
 
 <h2>How to install?</h2>
 Unzip the downloaded file and move libArrayList.so to /usr/lib
@@ -24,17 +24,18 @@ You can link the library to your C project as follows: gcc example.c -l ArrayLis
 
 int main()
 {
-    ArrayList *values = ArrayList_object();
-
-    ArrayList_IL a[] = {$L(char('A')), $L("ABC"), $L(100)};
-
-    for (size_t i = 0; i < 3; i++)
-    {
-        ArrayList_push(values, a[i]);
-    }
+    ArrayList_IL a[] = { 
+        $("Hello world"), 
+        $(char('A')), 
+        $(123),
+        $(0.123)
+    };
+    
+    ArrayList *values = ArrayList_From(a, ArrayList_IL_size(a));
 
     ArrayList_IL_destructor(a, 3);
     
+    printf("ArrayList values: ");
     ArrayList_println(values);
 
     ArrayList_delete(values);
@@ -45,9 +46,9 @@ int main()
 </pre>
 
 output:
-<pre> ['A', "ABC", 100] </pre>
+<pre> ArrayList values: ["Hello world", 'A', 123, 0.123] </pre>
 
-* Example A:
+* Example B:
 
 <pre>
 <code class="language-c">
@@ -64,6 +65,7 @@ int main()
     ArrayList_push(data, 123);
     ArrayList_push(data, 0.123);
     
+    printf("ArrayList data: ");
     ArrayList_println(data);
 
     ArrayList_delete(data);
@@ -74,4 +76,4 @@ int main()
 </pre>
 
 output:
-<pre> ["Hello world", 'Z', 123, 0.123] </pre>
+<pre> ArrayList data: ["Hello world", 'Z', 123, 0.123] </pre>
