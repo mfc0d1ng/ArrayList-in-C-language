@@ -33,7 +33,7 @@ int main()
     
     ArrayList *values = ArrayList_From(a, ArrayList_IL_size(a));
 
-    ArrayList_IL_destructor(a, 3);
+    ArrayList_IL_destructor(a, ArrayList_IL_size(a));
     
     printf("ArrayList values: ");
     ArrayList_println(values);
