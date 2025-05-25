@@ -3,7 +3,7 @@ A shared library which provides a set of functions for handling ArrayList in C l
 
 
 <h2>How to download?</h2>
-You can download it <a href="https://github.com/user-attachments/files/20422218/libArrayList.zip">here</a>
+You can download it <a href="https://github.com/user-attachments/files/20431498/libArrayList.zip">here</a>
 
 <h2>How to install?</h2>
 Unzip the downloaded file and move libArrayList.so to /usr/lib
@@ -31,9 +31,9 @@ int main()
         $(0.123)
     };
     
-    ArrayList* values = ArrayList_From(a, ArrayList_IL_size(a));
+    ArrayList* values = ArrayList_Init(a);
 
-    ArrayList_IL_erase(a, ArrayList_IL_size(a));
+    ArrayList_wipe(a);
     
     printf("ArrayList values: ");
     ArrayList_println(values);
